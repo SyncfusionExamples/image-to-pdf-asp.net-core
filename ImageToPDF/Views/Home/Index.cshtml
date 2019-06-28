@@ -1,0 +1,19 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<form method="post" id:"convertPDF" enctype="multipart/form-data" asp-controller="Home" asp-action="ConvertToPDF">
+    <div class="form-group">
+        <div class="col-md-10">
+            <p><h4>Select one or more images:</h4></p>
+            <input type="file" name="files" multiple accept="image/*">
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-10">
+            <br />
+            <input type="submit" value="Convert to PDF">
+        </div>
+    </div>
+</form>
+
