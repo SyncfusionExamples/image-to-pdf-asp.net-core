@@ -31,21 +31,20 @@ namespace ImageToPDF.Controllers
                     formFile.CopyTo(file);
                     if (formFile.ContentType == "image/tiff")
                     {
-                        //Get the image stream and draw frame by frame
-                        using (var tiffImage = new PdfBitmap(file))
+						//Get the image from stream and draw frame by frame
+                        PdfTiffImage tiffImage = new PdfTiffImage(file);
+ 
+                        int frameCount = tiffImage.FrameCount;
+                        for (int i = 0; i < frameCount; i++)
                         {
-                            int frameCount = tiffImage.FrameCount;
-                            for (int i = 0; i < frameCount; i++)
-                            {
-                                //Add pages to the document
-                                var page = document.Pages.Add();
-                                //Getting page size to fit the image within the page
-                                SizeF pageSize = page.GetClientSize();
-                                //Selecting frame in TIFF
-                                tiffImage.ActiveFrame = i;
-                                //Draw TIFF frame
-                                page.Graphics.DrawImage(tiffImage, 0, 0, pageSize.Width, pageSize.Height);
-                            }
+                            //Add pages to the document
+                            var page = document.Pages.Add();
+                            //Getting page size to fit the image within the page
+                            SizeF pageSize = page.GetClientSize();
+                            //Selecting frame in TIFF
+                            tiffImage.ActiveFrame = i;
+                            //Draw TIFF frame
+                            page.Graphics.DrawImage(tiffImage, 0, 0, pageSize.Width, pageSize.Height);
                         }
 
                     }
