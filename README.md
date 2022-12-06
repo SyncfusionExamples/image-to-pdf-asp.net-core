@@ -3,9 +3,9 @@ The [Syncfusion .NET PDF library](https://www.syncfusion.com/document-processing
 
 Sample name | Description
 --- | ---
-[ImageToPDF](https://github.com/SyncfusionExamples/image-to-pdf-asp.net-core/tree/EJDOTNETCORE-4260-Update-sample-link/ImageToPDF) | Convert PNG, JPEG, TIFF and multi-frame TIFF images to PDF document.
-[Set PDF page size to image size](https://github.com/SyncfusionExamples/image-to-pdf-asp.net-core/tree/EJDOTNETCORE-4260-Update-sample-link/Set-image-size-for-PDF-document-net-core) | The default size of a page in a PDF document is A4 (210 × 297 mm). Users can change the PDF page size to match the image size.
-[Apply transparency and rotation to images](https://github.com/SyncfusionExamples/image-to-pdf-asp.net-core/tree/EJDOTNETCORE-4260-Update-sample-link/Apply-transpancy-and-rotation-to-image-net-core) | Add transparency and rotation to images in PDF document. 
+[ImageToPDF](https://github.com/SyncfusionExamples/image-to-pdf-asp.net-core/tree/master/ImageToPDF) | Convert PNG, JPEG, TIFF and multi-frame TIFF images to PDF document.
+[Set PDF page size to image size](https://github.com/SyncfusionExamples/image-to-pdf-asp.net-core/tree/master/Set-image-size-for-PDF-document-net-core) | The default size of a page in a PDF document is A4 (210 × 297 mm). Users can change the PDF page size to match the image size.
+[Apply transparency and rotation to images](https://github.com/SyncfusionExamples/image-to-pdf-asp.net-core/tree/master/Apply-transpancy-and-rotation-to-image-net-core) | Add transparency and rotation to images in PDF document. 
 
 # How to run the examples
 * Download this project to a location in your disk. 
