@@ -55,15 +55,13 @@ namespace ImageToPDF.Controllers
                         //Adding new page
                         PdfPage page = page = document.Pages.Add();
                         //Drawing image to the PDF page
-                        page.Graphics.DrawImage(image, new PointF(0, 0));
+                        page.Graphics.DrawImage(image, new RectangleF(0, 0, page.GetClientSize().Width, page.GetClientSize().Height));
                     }
                     file.Dispose();
-
                 }
             }
             //Saving the PDF to the MemoryStream
             MemoryStream stream = new MemoryStream();
-
             document.Save(stream);
 
             //Set the position as '0'.
@@ -71,9 +69,7 @@ namespace ImageToPDF.Controllers
 
             //Download the PDF document in the browser
             FileStreamResult fileStreamResult = new FileStreamResult(stream, "application/pdf");
-
             fileStreamResult.FileDownloadName = "ImageToPDF.pdf";
-
             return fileStreamResult;
         }
         
