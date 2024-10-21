@@ -6,7 +6,7 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.9" />
-    <PackageReference Include="Syncfusion.Pdf.Imaging.Net.Core" Version="20.3.0.59" />
+    <PackageReference Include="Syncfusion.Pdf.Imaging.Net.Core" Version="*" />
   </ItemGroup>
 
   <ItemGroup>
